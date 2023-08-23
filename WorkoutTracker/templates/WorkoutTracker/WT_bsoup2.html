@@ -1,0 +1,31 @@
+{% extends "WT_base.html" %}
+
+{% block content %}
+
+<h3>Example Workout Schedule</h3>
+
+<div class="basics" >
+        <div class="basics2">
+            <h4 style="font-size: 1.25vw">Weekly Workout Schedule</h4>
+                <p>{{ listItem.0 }}</p>
+                <p>{{ listItem.1 }} <br>
+                    (opt: with focus on quads)</p>
+                <p>{{ listItem.2 }} <br>
+                    (opt: Shoulders/Chest and Triceps)</p>
+                <p>{{ listItem.3 }}</p>
+                <p>{{ listItem.4 }}</p>
+                <p>{{ listItem.5 }} <br>
+                    (opt: Back and Biceps)</p>
+                <p>{{ listItem.6 }}</p>
+            <br>
+        </div>
+    
+    <button><a href="{% url 'WT_save' %}">Save Example</a></button>
+    <br>
+    <br>
+</div>
+
+<h5>Information from <a target="_blank" href="https://www.health.com/fitness/workout-schedule">https://www.health.com/fitness/workout-schedule</a></h5>
+
+
+{% endblock %}

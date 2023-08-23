@@ -1,0 +1,18 @@
+{% extends "WT_base.html" %}
+
+{% block content %}
+
+<h3>Weather</h3>
+
+<div class="weather">
+    <h4>Adding outdoor activities can be beneficial to your health.<br>
+        Check the weather forcast to plan an outdoor workout or activity. </h4>
+
+        <h2>{{ location }}</h2>
+        <h2>{{ temperature }}</h2>
+        <h4>{{ conditions }}</h4>
+        <h4>{{ wind }}</h4>
+        <h4>{{ humidity }}</h4>
+    <br>
+</div>
+{% endblock %}

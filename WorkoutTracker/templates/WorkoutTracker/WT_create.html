@@ -1,0 +1,31 @@
+{% extends "WT_base.html" %}
+
+{% block title %}Create Workout{% endblock %}
+
+{% block content %}
+<div class="create">
+    <h4> Enter your workout choices for today in the form below.<br>
+    For a list of possible exercises visit the Workout Directory page under Workouts.</h4>
+
+            <form method="POST">
+                {% csrf_token %}
+                {{form.as_p}}
+                <button type="submit"><a>Save Workout</a></button>
+            </form>
+
+    <button class="open-button" onclick="openForm()">Click for Motivation</button>
+</div>
+
+<!-- The form -->
+    <div class="form-popup" id="myForm">
+      <form action="/action_page.php" class="form-container">
+        <h3>GO YOU!</h3>
+        <iframe src="https://giphy.com/embed/4bjIKBOWUnVPICCzJc" width="240" height="180" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/tomato-carrot-broccoli-4bjIKBOWUnVPICCzJc">via GIPHY</a></p>
+        <h4>Good job getting your workouts in! You're getting stronger every day!</h4>
+
+
+        <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+      </form>
+    </div>
+
+{% endblock %}

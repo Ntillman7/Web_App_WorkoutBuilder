@@ -1,0 +1,40 @@
+{% extends "WT_base.html" %}
+
+{% block content %}
+
+<h3 class="h3space">Upper Body Exercises</h3>
+
+<div class="exercises">
+        <div class="exercises2">
+            <div class="chest" style="float: left; width: 33%">
+                <h4> Chest Exercises</h4>
+                {% for i in listItem %}
+                <div>
+                       {{ i }}
+                </div>
+                {% endfor %}
+            </div>
+            <div class="shoulders" style="float: left ; width: 33%">
+                <h4> Shoulder Exercises</h4>
+                {% for i in listItem1 %}
+                <div>
+                       {{ i }}
+                </div>
+                {% endfor %}
+            </div>
+            <div class="back" style="float: right; width: 33%">
+                <h4> Back Exercises</h4>
+                {% for i in listItem2 %}
+                <div>
+                       {{ i }}
+                </div>
+                {% endfor %}
+            </div>
+         </div>
+</div>
+
+
+<h4>Information from <a target="_blank" href="https://www.strengthlog.com/exercise-directory/">https://www.strengthlog.com/exercise-directory/</a></h4>
+
+
+{% endblock %}

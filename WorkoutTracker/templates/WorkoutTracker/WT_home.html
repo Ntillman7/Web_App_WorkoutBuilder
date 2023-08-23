@@ -1,0 +1,39 @@
+{% extends 'WT_base.html' %}
+
+{% block content %}
+<div class="home">
+    <h1 class="center">Daily Workout Builder</h1>
+    <h3 class="center">A helpful tool for your fitness journey.</h3>
+
+
+
+    <div class="slideshow-container">
+
+      <!-- Full-width images with number and caption text -->
+      <div class="mySlides fade">
+        <img src="/static/images/crunches_woman_ edit.jpg" style="width:100%">
+      </div>
+
+      <div class="mySlides fade">
+        <img src="/static/images/running_man_edit.jpg" style="width:100%">
+      </div>
+
+      <div class="mySlides fade">
+        <img src="/static/images/lifting_woman_edit.jpg" style="width:100%">
+      </div>
+
+      <div class="mySlides fade">
+        <img src="/static/images/push_ups_man_edit.jpg" style="width:100%">
+      </div>
+
+       <div class="mySlides fade">
+        <img src="/static/images/lunges_woman_edit.jpg" style="width:100%">
+      </div>
+    </div>
+
+    <div>
+        <button><a href="{% url 'WT_create' %}">Create Workout</a></button>
+        <button><a href="{% url 'WT_log' %}">Saved Workouts</a></button>
+    </div>
+</div>
+{% endblock%}

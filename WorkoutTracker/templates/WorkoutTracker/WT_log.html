@@ -1,0 +1,37 @@
+ {% extends "WT_base.html" %}
+
+{% block content %}
+ <h3>Workout Log</h3>
+
+
+<div class="logPage">
+    <div class="logPage2">
+        <br>
+        <h4>Click on a date to see workout details or
+            <br>click the favorite button to add workout to favorites.</h4>
+        <table class="log">
+            <tr class="toprw">
+                <th>Date</th>
+                <th>Type</th>
+                <th></th>
+            </tr>
+            {% for w in workout %}
+            <tr>
+                <td><a href="{% url 'WT_details' w.id %}">{{ w.date }}</a></td>
+                <td>{{ w.workout_type }}</td>
+                <td>
+                    <form action="{% url 'WT_faves' w.id %}" method="POST">
+                        {% csrf_token %}
+                        <button style="font-size: 1vw" type="submit">Favorite</button>
+                    </form>
+                </td>
+
+            </tr>
+             {% endfor %}
+        </table>
+        <br>
+    </div>
+    <button><a href="{% url 'WT_create' %}">Add New Workout</a></button>
+</div>
+
+{% endblock %}

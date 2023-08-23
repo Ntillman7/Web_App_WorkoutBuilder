@@ -1,0 +1,25 @@
+{% extends "WT_base.html" %}
+
+{% block content %}
+<h3>Favorite Workouts</h3>
+
+{% for fave in favorites %}
+
+<div class="basics">
+    <div class="basics2">
+            <p><strong>{{ fave.date }} - {{ fave.workout_type }}</strong> </p>
+        <div class="basics3">
+            <p><strong>Exercise 1: </strong> {{ fave.exercise_1 }}</p>
+            <p><strong>Exercise 2: </strong>{{ fave.exercise_2 }}</p>
+            <p><strong>Exercise 3: </strong>{{ fave.exercise_3 }}</p>
+            <p><strong>Exercise 4: </strong>{{ fave.exercise_4 }}</p>
+            <p><strong>Exercise 5: </strong>{{ fave.exercise_5 }}</p>
+            <p><strong>Exercise 6: </strong>{{ fave.exercise_6 }}</p>
+            <p><strong>Exercise 7: </strong>{{ fave.exercise_7 }}</p>
+            <p><strong>Cardio: </strong>{{ fave.cardio|yesno:"Yes,No" }}</p>
+            <p><strong>Cardio Duration:  </strong>{{ fave.cardio_duration }} </p>
+        </div>
+    </div>
+</div>
+{% endfor %}
+{% endblock %}

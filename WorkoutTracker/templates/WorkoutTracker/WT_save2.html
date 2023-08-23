@@ -1,0 +1,23 @@
+{% extends "WT_base.html" %}
+
+{% block content %}
+
+<h3>Saved Example</h3>
+
+
+<div class="basics">
+    <div class="basics2">
+        <div class="basics3">
+            {% for workout in workouts %}
+            <p><strong>{{ workout.type }}</strong></p>
+            <p> {{ workout.description }}</p>
+
+            <p>-----------------------------------------</p>
+
+
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends "WT_base.html" %}
+
+{% block content %}
+<div class="update">
+	<h4>You can make changes to your workout below.</h4>
+	<form method="POST">
+				{% csrf_token %}
+				{{ form.as_p }}
+		<button class="btn" type="submit">Save Changes</button>
+		<button type="submit"><a href="{% url 'WT_details' workout.id %}">Go Back to Details</a></button>
+	</form>
+</div>
+{% endblock %}

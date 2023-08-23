@@ -1,0 +1,28 @@
+{% extends "WT_base.html" %}
+
+{% block content %}
+<div class="details">
+    <div class="details2">
+        <h3>{{ workout.date }}</h3>
+        <h4>{{ workout.workout_type }}</h4>
+            <div class="summary">
+                <p class="center">{{ workout.sets }} x {{ workout.reps }}</p>
+                <p><strong>Exercise 1: </strong> {{ workout.exercise_1 }}</p>
+                <p><strong>Exercise 2: </strong> {{ workout.exercise_2 }}</p>
+                <p><strong>Exercise 3: </strong> {{ workout.exercise_3 }}</p>
+                <p><strong>Exercise 4: </strong> {{ workout.exercise_4 }}</p>
+                <p><strong>Exercise 5: </strong> {{ workout.exercise_5 }}</p>
+                <p><strong>Exercise 6: </strong> {{ workout.exercise_6 }}</p>
+                <p><strong>Exercise 7: </strong> {{ workout.exercise_7 }}</p>
+                <p><strong>Cardio:</strong> {{ workout.cardio|yesno:"Yes,No" }}</p>
+                <p><strong>Cardio Duration:</strong> {{ workout.cardio_duration }}</p>
+            </div>
+        <br>
+    </div>
+    <button><a href="{% url 'WT_update' workout.id %}">Update Workout</a></button>
+    <button type="submit"><a href="{% url 'WT_delete' workout.id %}">Delete Workout</a></button>
+    <br>
+    <button><a href="{% url 'WT_log' %}">Return to Saved Workouts</a></button>
+</div>
+{% endblock %}
+
